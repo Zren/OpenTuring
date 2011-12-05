@@ -162,11 +162,13 @@ struct TL_TL_ProcessDescriptor	*pd;
     pd->otherInfo = (TLaddressint) 0;
 }
 
-void TL_TLK_TLKINI () {
+// Turing Library Initalizer
+void TL_TLK_TLKINI () { // Does nothing?!
 }
 
+// Turing Library Finalizer
 void TL_TLK_TLKFINI () {
-    TL_TLK_TLKUEXIT((TL_Cint) 0);
+    TL_TLK_TLKUEXIT((TL_Cint) 0); // Exit cleanly
 }
 
 void TL_TLK_TLKUXRS () {
@@ -181,7 +183,7 @@ TL_Cint	exitCode;
 
     extern void exit ();
     TL_TLI_TLIFS();
-    TL_TLI_TLIFINI();
+    TL_TLI_TLIFINI(); // Finalize Streams?
     exit((TL_Cint) exitCode);
 }
 
